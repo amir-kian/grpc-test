@@ -395,4 +395,8 @@ FodyWeavers.xsd
 *.msp
 
 # JetBrains Rider
+<<<<<<< HEAD
 *.sln.iml
+=======
+*.sln.iml
+>>>>>>> 6d4c9b7 (initialize the git source)
