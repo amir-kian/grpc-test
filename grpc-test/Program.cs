@@ -17,8 +17,8 @@ namespace grpc_test
 			builder.Services.AddSwaggerGen();
 
 			builder.Services.AddGrpcSdk();
-
-			var app = builder.Build();
+            builder.Services.AddScoped<IGreatGrpcClientService, GreatGrpcClientService>();
+            var app = builder.Build();
 
 			// Configure the HTTP request pipeline.
 			if (app.Environment.IsDevelopment())

@@ -10,12 +10,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="greet.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.29.0-rc3" />
+    <PackageReference Include="Grpc.Tools" Version="2.67.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GrpcSDK\GrpcSDK.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="greet.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
   </ItemGroup>
 
 </Project>
